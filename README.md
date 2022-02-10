@@ -18,7 +18,7 @@ docker build -t keras-io . && docker run --rm -p 8000:8000 keras-io
 ```
 
 It will take a while the first time because it's going to pull the
-image and the dependencies, but on the next times it'll be much faster.
+image and the dependencies, but  the next time it'll be much faster.
 
 Another way of testing using Docker is via our Makefile:
 
@@ -47,10 +47,10 @@ A tutobook is a script available simultaneously as a notebook,
 as a Python file, and as a nicely-rendered webpage.
 
 Its source-of-truth (for manual edition and version control) is
-its Python script form, but you can also create one by starting
+its a Python script form, but you can also create one by starting
 from a notebook and converting it with the command `nb2py`.
 
-Text cells are stored in markdown-formatted comment blocks.
+Text cells are stored in Markdown-formatted comment blocks.
 the first line (starting with `"""`) may optionally contain a special
 annotation, one of:
 
@@ -72,7 +72,7 @@ To see examples of tutobooks, you can check out any `.py` file in `examples/` or
 
 ### Creating a new example starting from a `ipynb` file
 
-1. Save the `ipynb` file to local disk.
+1. Save the `ipynb` file to the local disk.
 2. Convert the file to a tutobook by running:
 (assuming you are in the `scripts/` directory)
 
@@ -87,7 +87,7 @@ This will create the file `examples/vision/script_name.py`.
 
 NOTE THAT THE CONVERSION SCRIPT MAY MAKE MISTAKES IN ITS ATTEMPTS
 TO SHORTEN LINES. MAKE SURE TO PROOFREAD THE GENERATED .py IN FULL.
-Or alternatively, make sure to keep your lines reasonably-sized (<90 char)
+Or alternatively, make sure to keep your lines reasonably sized (<90 char)
 to start with, so that the script won't have to shorten them.
 
 4. Run `python autogen.py add_example vision/script_name`. This will generate an ipynb and markdown
